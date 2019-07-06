@@ -1,10 +1,17 @@
 <template>
   <div id="app">
-    <p>Hello renos</p>
+    <b-button>Button</b-button>
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+Vue.use(BootstrapVue)
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 export default {
   name: 'app',
   components: {
