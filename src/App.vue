@@ -3,7 +3,7 @@
     <b-container fluid class="full-height">
         <b-row class="full-height">
             <b-col class="full-height" cols="2">
-                <nav-bar class="full-height" />
+                <nav-bar class="full-height"/>
             </b-col>
         </b-row>
     </b-container>
@@ -14,10 +14,8 @@
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue)
-
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
 import NavBar from './components/NavBar.vue'
 
 
