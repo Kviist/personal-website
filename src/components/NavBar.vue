@@ -3,14 +3,15 @@
         
         <b-img src="../assets/logo.png" alt="Jonathan Kvist"></b-img>
 
-        <particles-j-s/>
-        <b-nav vertical class="navigation">
+        <particles-j-s class="full-height-and-width">
+            <b-nav vertical class="navigation">
             <b-nav-item class="nav-item">Home</b-nav-item>
             <b-nav-item class="nav-item">Publications</b-nav-item>
             <b-nav-item class="nav-item">Projects</b-nav-item>
             <b-nav-item class="nav-item">Contact</b-nav-item>
             <b-nav-item class="nav-item">Blog</b-nav-item>
         </b-nav>
+        </particles-j-s>
     </div>
 </template>
 
@@ -26,10 +27,15 @@ export default {
 
 <style>
 .black {
-    background-color: #2b2929;
+    background-color: #623e88;
 }
 .full-height {
     height: 100%;
+}
+
+.full-height-and-width{
+    height: 100%;
+    width: 100%;
 }
 .navigation {
     padding-top: 200%;
