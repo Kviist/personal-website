@@ -1,5 +1,7 @@
 <template>
+    
     <div class="full-height black">
+        <div id="particles-js"></div>
         <b-img src="../assets/logo.png" alt="Jonathan Kvist"></b-img>
 
         <b-nav vertical class="navigation">
@@ -12,7 +14,13 @@
     </div>
 </template>
 
+<script src="particles.js"></script>
+
 <script>
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', 'assets/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
 export default {
     
 }
