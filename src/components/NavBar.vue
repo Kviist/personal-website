@@ -1,7 +1,9 @@
 <template>
     <div class="full-height black">
+        
         <b-img src="../assets/logo.png" alt="Jonathan Kvist"></b-img>
 
+        <particles-j-s/>
         <b-nav vertical class="navigation">
             <b-nav-item class="nav-item">Home</b-nav-item>
             <b-nav-item class="nav-item">Publications</b-nav-item>
@@ -13,8 +15,12 @@
 </template>
 
 <script>
+import ParticlesJS from './ParticlesJS.vue'
+
 export default {
-    
+    components: {
+        ParticlesJS
+    }
 }
 </script>
 
