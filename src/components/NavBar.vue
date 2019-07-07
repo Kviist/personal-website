@@ -47,13 +47,14 @@ export default {
     opacity: 0.99;
     pointer-events:none;
     margin: 50% 0;
+    font-size:100%
 }
 a {
     color: inherit;
 }
 .nav-item{
     color: white;
-    font-size: 2em;
+    font-size: 2vw;
     opacity: 0.99;
     pointer-events:auto;
     font-weight: 300;
