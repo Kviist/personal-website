@@ -44,16 +44,16 @@ export default {
     background-color: #623e88;
 }
 .navigation {
-    padding-top: 20vw;
     opacity: 0.99;
     pointer-events:none;
+    margin: 50% 0;
 }
 a {
     color: inherit;
 }
 .nav-item{
     color: white;
-    font-size: 2vw;
+    font-size: 2em;
     opacity: 0.99;
     pointer-events:auto;
     font-weight: 300;
