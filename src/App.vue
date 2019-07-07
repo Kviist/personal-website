@@ -7,7 +7,7 @@
           </div>
         </div>
         <div class="right">
-          <p>Second</p>
+         <home v-if="whichCompontent() === 'Home'"/>
         </div>
     </div>
   </div>
@@ -20,11 +20,23 @@ Vue.use(BootstrapVue)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import NavBar from './components/NavBar.vue'
+import Home from './components/Home.vue'
 
 export default {
   name: 'app',
   components: {
-    NavBar
+    NavBar,
+    Home
+  },
+  data: () => {
+    return {
+      currentPage: "Home"
+    }
+  }, 
+  methods: {
+    whichCompontent: function () {
+      return this.currentPage;
+    }
   }
 }
 </script>
