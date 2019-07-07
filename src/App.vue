@@ -6,9 +6,9 @@
               <nav-bar class="full-height"/>
           </div>
         </div>
-        <div class="right">
-          <p>Second</p>
-        </div>
+       <home v-if="whichCompontent() === 'Home'"/>
+       <blog v-else-if="false"/>
+       <nav-bar v-else-if="false"/>
     </div>
   </div>
 </template>
@@ -20,11 +20,25 @@ Vue.use(BootstrapVue)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import NavBar from './components/NavBar.vue'
+import Blog from './components/Blog.vue'
+import Home from './components/Home.vue'
 
 export default {
   name: 'app',
   components: {
-    NavBar
+    NavBar,
+    Blog,
+    Home
+  },
+  data: () => {
+    return {
+      currentPage: "Home"
+    }
+  }, 
+  methods: {
+    whichCompontent: function () {
+      return this.currentPage;
+    }
   }
 }
 </script>
@@ -41,7 +55,7 @@ export default {
 
 .full-height {
   height: 100%;
-  overflow: hidden;
+
 }
 
 .main-comp {
@@ -59,7 +73,7 @@ export default {
   padding: 0;
 }
 
-.right {
+.comp-right {
   background-color: red;
   width: 100%;
   height: 100vh;
