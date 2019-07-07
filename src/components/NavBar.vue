@@ -47,7 +47,10 @@ export default {
     opacity: 0.99;
     pointer-events:none;
     font-size:100%;
-    margin: 70% auto;
+    position: absolute;
+    bottom: 10vh;
+    text-align: center;
+    width: 100%;
 }
 a {
     color: inherit;
