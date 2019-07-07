@@ -1,5 +1,5 @@
 <template>
-    <div class="full-height outer">
+    <div class="full-height">
         <particles-j-s class="particles"></particles-j-s>
         <b-nav vertical class="top">
             <b-img fluid rounded='circle' id="portrait" :src="require('../assets/jonathan.jpg')" alt="Jonathan Kvist" />
@@ -31,8 +31,12 @@
                 <b-nav-item class="sub-nav-item">2</b-nav-item>
             </b-collapse>
 
-
             <b-nav-item class="nav-item">Contact</b-nav-item>
+            <div class="icons">
+                 <img src="../assets/_ionicons_svg_md-mail.svg" class="icon" alt="Mail icon" v-b-tooltip.hover.bottom title="Email me">
+                 <img src="../assets/_ionicons_svg_logo-linkedin.svg" class="icon" alt="Linkedin icon" v-b-tooltip.hover.bottom title="Linked in profile">
+                 <img src="../assets/_ionicons_svg_logo-github.svg" class="icon" alt="Github icon" v-b-tooltip.hover.bottom title="GitHub page" >
+            </div>
         </b-nav>
     </div>
 </template>
@@ -43,6 +47,11 @@ import ParticlesJS from './ParticlesJS.vue'
 export default {
     components: {
         ParticlesJS
+    },
+    methods: {
+        openInNewTab: function () {
+            
+        }
     }
 }
 </script>
@@ -51,13 +60,6 @@ export default {
 .full-height {
     height: 100%;
     width: 100%;
-}
-
-.outer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
 }
 
 .top {
@@ -77,7 +79,6 @@ export default {
     font-size:100%;
     text-align: left;
     vertical-align:middle;
-    align-self: flex-start;
 }
 a, p{
     color: white;
@@ -120,6 +121,21 @@ a:hover {
 
 .col-2 {
     padding: 0;
+}
+
+.icons{
+    display: flex;
+    padding: 0.5rem 1rem;
+    pointer-events:auto;
+    flex: 0 0 auto;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+.icon {
+    width: 15%;
 }
 
 @media screen and (max-width: 768px) {
