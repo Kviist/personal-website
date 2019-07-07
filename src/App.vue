@@ -36,9 +36,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow: scroll;
 }
 
-.full-height, #app, body, html {
+.full-height {
   height: 100%;
   overflow: hidden;
 }
@@ -49,12 +50,32 @@ export default {
 
 .left {
   width: 16rem;
+  display: inline-block;
+}
+
+.left-div {
+  position: absolute;
+  width: 16rem;
+  padding: 0;
 }
 
 .right {
   background-color: red;
   width: 100%;
-  min-width: 300px;
+  height: 100vh;
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+    .left, .left-div, .right{
+        width: 100%;
+        height: 40rem;
+    }
+
+    .main-comp {
+      flex-flow: row wrap;
+    }
+
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -104,11 +125,5 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-.left-div {
-  position: absolute;
-  width: 16rem;
-  padding: 0;
 }
 </style>
