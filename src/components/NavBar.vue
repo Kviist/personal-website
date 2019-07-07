@@ -62,11 +62,10 @@ a:hover {
 }
 
 #portrait {
-    width: 70%;
-    display: block;
-    margin: auto;
+    margin: 0px auto;
     padding-top: 10%;
     border-radius: 50%;
+    width: 70%;
 }
 
 .col-2 {
