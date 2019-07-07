@@ -1,9 +1,11 @@
 <template>
     <div class="full-height">
         
-        <b-img src="../assets/logo.png" alt="Jonathan Kvist"></b-img>
-
         <particles-j-s class="full-height-and-width"></particles-j-s>
+
+        <b-nav vertical class="top">
+            <b-img fluid rounded='circle' :src="require('../assets/jonathan.jpg')" alt="Jonathan Kvist" />
+        </b-nav>
 
         <b-nav vertical class="navigation">
             <b-nav-item class="nav-item">Home</b-nav-item>
@@ -30,6 +32,12 @@ export default {
     height: 100%;
 }
 
+
+.top {
+    padding-top: 10%;
+    opacity: 0.99;
+    pointer-events:none;
+}
 .full-height-and-width{
     position: absolute;
     height: 100%;
@@ -37,7 +45,7 @@ export default {
     background-color: #623e88;
 }
 .navigation {
-    padding-top: 200%;
+    padding-top: 100%;
     opacity: 0.99;
     pointer-events:none;
 }
