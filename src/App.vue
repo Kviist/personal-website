@@ -1,12 +1,15 @@
 <template>
   <div id="app">
-    <b-container fluid class="full-height">
-        <b-row class="full-height">
-            <b-col class="full-height left-div">
-                <nav-bar class="full-height"/>
-            </b-col>
-        </b-row>
-    </b-container>
+    <div class="full-height main-comp">
+        <div class="left">
+          <div class="full-height left-div">
+              <nav-bar class="full-height"/>
+          </div>
+        </div>
+        <div class="right">
+          <p>Second</p>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -38,6 +41,20 @@ export default {
 .full-height, #app, body, html {
   height: 100%;
   overflow: hidden;
+}
+
+.main-comp {
+  display: flex;
+}
+
+.left {
+  width: 16rem;
+}
+
+.right {
+  background-color: red;
+  width: 100%;
+  min-width: 300px;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
