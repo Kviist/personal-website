@@ -1,9 +1,10 @@
 <template>
-    <div class="full-height black">
+    <div class="full-height">
         
         <b-img src="../assets/logo.png" alt="Jonathan Kvist"></b-img>
 
         <particles-j-s class="full-height-and-width"></particles-j-s>
+
         <b-nav vertical class="navigation">
             <b-nav-item class="nav-item">Home</b-nav-item>
             <b-nav-item class="nav-item">Publications</b-nav-item>
@@ -25,9 +26,6 @@ export default {
 </script>
 
 <style>
-.black {
-   
-}
 .full-height {
     height: 100%;
 }
@@ -36,11 +34,12 @@ export default {
     position: absolute;
     height: 100%;
     width: 100%;
-    z-index: -1;
     background-color: #623e88;
 }
 .navigation {
     padding-top: 200%;
+    opacity: 0.99;
+    pointer-events:none;
 }
 a {
     color: inherit;
@@ -48,6 +47,8 @@ a {
 .nav-item{
     color: #c4c7cc;
     font-size: 150%;
+    opacity: 0.99;
+    pointer-events:auto;
 }
 a:hover {
     color: white;
