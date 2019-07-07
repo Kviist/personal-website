@@ -21,6 +21,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import NavBar from './components/NavBar.vue'
 import Home from './components/Home.vue'
+import VueMathjax from 'vue-mathjax'
+Vue.use(VueMathjax)
 
 export default {
   name: 'app',
