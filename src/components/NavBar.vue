@@ -44,7 +44,7 @@ export default {
     background-color: #623e88;
 }
 .navigation {
-    padding-top: 100%;
+    padding-top: 20vw;
     opacity: 0.99;
     pointer-events:none;
 }
