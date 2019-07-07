@@ -52,8 +52,8 @@ a {
     color: inherit;
 }
 .nav-item{
-    color: #c4c7cc;
-    font-size: 150%;
+    color: white;
+    font-size: 2vw;
     opacity: 0.99;
     pointer-events:auto;
 }
