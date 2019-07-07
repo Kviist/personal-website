@@ -1,6 +1,5 @@
 <template>
-    <div class="full-height">
-        
+    <div class="full-height outer">
         <particles-j-s class="particles"></particles-j-s>
         <b-nav vertical class="top">
             <b-img fluid rounded='circle' id="portrait" :src="require('../assets/jonathan.jpg')" alt="Jonathan Kvist" />
@@ -32,10 +31,17 @@ export default {
 <style>
 .full-height {
     height: 100%;
-    width: 100%
+    width: 100%;
 }
+
+.outer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
 .top {
-    padding-top: 10%;
     opacity: 0.99;
     pointer-events:none;
 }
@@ -49,11 +55,9 @@ export default {
     opacity: 0.99;
     pointer-events:none;
     font-size:100%;
-    display: inline-block;
-    float: left;
-    position: relative;
     text-align: left;
-    padding-top: 10rem;
+    margin-top: auto;
+    margin-bottom: 5rem;
 }
 a, p{
     color: white;
