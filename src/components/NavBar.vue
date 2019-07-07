@@ -71,7 +71,7 @@ export default {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #1e1d1f;
+    background-color: #623e88;
 }
 .navigation {
     opacity: 0.99;
