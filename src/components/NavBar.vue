@@ -1,10 +1,9 @@
 <template>
     <div class="full-height">
         
-        <particles-j-s class="full-height-and-width"></particles-j-s>
-
+        <particles-j-s class="particles"></particles-j-s>
         <b-nav vertical class="top">
-            <b-img fluid rounded='circle' :src="require('../assets/jonathan.jpg')" alt="Jonathan Kvist" />
+            <b-img fluid rounded='circle' id="portrait" :src="require('../assets/jonathan.jpg')" alt="Jonathan Kvist" />
         </b-nav>\
         <b-nav vertical class="navigation">
             <b-nav-item class="nav-item">Home</b-nav-item>
@@ -29,6 +28,7 @@ export default {
 <style>
 .full-height {
     height: 100%;
+    width: 100%
 }
 
 
@@ -37,7 +37,7 @@ export default {
     opacity: 0.99;
     pointer-events:none;
 }
-.full-height-and-width{
+.particles{
     position: absolute;
     height: 100%;
     width: 100%;
@@ -63,8 +63,14 @@ a:hover {
 
 #portrait {
     width: 70%;
+    display: block;
+    margin: auto;
     padding-top: 10%;
     border-radius: 50%;
+}
+
+.col-2 {
+    padding: 0;
 }
 
 </style>
