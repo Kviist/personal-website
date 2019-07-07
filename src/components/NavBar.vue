@@ -1,9 +1,7 @@
 <template>
-    <div class="full-height black">
-        
-        <b-img src="../assets/logo.png" alt="Jonathan Kvist"></b-img>
-
+    <div class="full-height">
         <particles-j-s class="full-height-and-width"></particles-j-s>
+        <img id="portrait" src="../assets/jonathan.jpg" alt="Jonathan Kvist">
         <b-nav vertical class="navigation">
             <b-nav-item class="nav-item">Home</b-nav-item>
             <b-nav-item class="nav-item">Publications</b-nav-item>
@@ -25,9 +23,6 @@ export default {
 </script>
 
 <style>
-.black {
-   
-}
 .full-height {
     height: 100%;
 }
@@ -51,6 +46,12 @@ a {
 }
 a:hover {
     color: white;
+}
+
+#portrait {
+    width: 70%;
+    padding-top: 10%;
+    border-radius: 50%;
 }
 
 </style>

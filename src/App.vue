@@ -33,6 +33,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-bottom:0;
+  padding-bottom: 0;
 }
 
 .full-height, #app, body, html {

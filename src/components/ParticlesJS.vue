@@ -1,5 +1,6 @@
 <template>
-  <div id='particles-js'></div>
+  <div id='particles-js'>
+  </div>
 </template>
 
 <script>
