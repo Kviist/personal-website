@@ -40,11 +40,6 @@
 <script>
 import ParticlesJS from './ParticlesJS.vue'
 
-
-
-
-
-
 export default {
     components: {
         ParticlesJS
@@ -81,7 +76,8 @@ export default {
     font-size:100%;
     text-align: left;
     margin-top: auto;
-    margin-bottom: 5rem;
+    margin-bottom: auto;
+    align-self: flex-start;
 }
 a, p{
     color: white;
