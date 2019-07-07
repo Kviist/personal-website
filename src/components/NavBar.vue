@@ -53,7 +53,7 @@ a {
 }
 .nav-item{
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     opacity: 0.99;
     pointer-events:auto;
     font-weight: 300;
