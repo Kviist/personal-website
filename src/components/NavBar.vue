@@ -75,8 +75,7 @@ export default {
     pointer-events:none;
     font-size:100%;
     text-align: left;
-    margin-top: auto;
-    margin-bottom: auto;
+    vertical-align:middle;
     align-self: flex-start;
 }
 a, p{
