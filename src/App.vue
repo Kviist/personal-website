@@ -2,7 +2,7 @@
   <div id="app">
     <b-container fluid class="full-height">
         <b-row class="full-height">
-            <b-col class="full-height" cols="2">
+            <b-col class="full-height left-div">
                 <nav-bar class="full-height"/>
             </b-col>
         </b-row>
@@ -87,5 +87,11 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+.left-div {
+  position: absolute;
+  width: 20rem;
+  padding: 0;
 }
 </style>

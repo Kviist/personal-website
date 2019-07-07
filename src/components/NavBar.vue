@@ -30,8 +30,6 @@ export default {
     height: 100%;
     width: 100%
 }
-
-
 .top {
     padding-top: 10%;
     opacity: 0.99;
@@ -47,17 +45,17 @@ export default {
     opacity: 0.99;
     pointer-events:none;
     font-size:100%;
-    position: absolute;
-    bottom: 10vh;
+    position: relative;
     text-align: center;
     width: 100%;
+    padding-top: 10rem;
 }
 a {
     color: inherit;
 }
 .nav-item{
     color: white;
-    font-size: 2vw;
+    font-size: 1.5rem;
     opacity: 0.99;
     pointer-events:auto;
     font-weight: 300;
@@ -70,7 +68,7 @@ a:hover {
     margin: 0px auto;
     padding-top: 10%;
     border-radius: 50%;
-    width: 85%;
+    width: 50%;
 }
 
 .col-2 {
