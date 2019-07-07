@@ -69,7 +69,7 @@ export default {
 @media screen and (max-width: 768px) {
     .left, .left-div, .right{
         width: 100%;
-        height: 40rem;
+        height: 100vh;
     }
 
     .main-comp {

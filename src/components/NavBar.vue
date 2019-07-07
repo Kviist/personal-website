@@ -122,6 +122,15 @@ a:hover {
     padding: 0;
 }
 
+@media screen and (max-width: 768px) {
+    .navigation {
+        margin: 0 auto;
+        text-align: center;
+        padding: 10vh;
+    }
+
+}
+
 </style>
 
 
