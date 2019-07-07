@@ -46,8 +46,8 @@ export default {
 .navigation {
     opacity: 0.99;
     pointer-events:none;
-    margin: 50% 0;
-    font-size:100%
+    font-size:100%;
+    margin: 70% auto;
 }
 a {
     color: inherit;
