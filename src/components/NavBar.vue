@@ -56,6 +56,7 @@ a {
     font-size: 2vw;
     opacity: 0.99;
     pointer-events:auto;
+    font-weight: 300;
 }
 a:hover {
     color: white;
