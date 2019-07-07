@@ -73,9 +73,10 @@ export default {
     opacity: 0.99;
     pointer-events:none;
     font-size:100%;
+    display: inline-block;
+    float: left;
     position: relative;
     text-align: left;
-    width: 60%;
     padding-top: 10rem;
 }
 a, p{
@@ -93,6 +94,7 @@ a, p{
     font-weight: 200;
     padding-top: 0.5rem;
     padding-bottom: 0;
+    letter-spacing: 2px;
 }
 .nav-item{
     font-size: 1.5rem;
