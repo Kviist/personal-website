@@ -5,8 +5,7 @@
 
         <b-nav vertical class="top">
             <b-img fluid rounded='circle' :src="require('../assets/jonathan.jpg')" alt="Jonathan Kvist" />
-        </b-nav>
-
+        </b-nav>\
         <b-nav vertical class="navigation">
             <b-nav-item class="nav-item">Home</b-nav-item>
             <b-nav-item class="nav-item">Publications</b-nav-item>
@@ -60,6 +59,12 @@ a {
 }
 a:hover {
     color: white;
+}
+
+#portrait {
+    width: 70%;
+    padding-top: 10%;
+    border-radius: 50%;
 }
 
 </style>
