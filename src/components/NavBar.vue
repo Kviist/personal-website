@@ -63,6 +63,7 @@ export default {
 .top {
     opacity: 0.99;
     pointer-events:none;
+    margin-top: 1rem;
 }
 .particles{
     position: absolute;
