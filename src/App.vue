@@ -91,7 +91,7 @@ table {
 
 .left-div {
   position: absolute;
-  width: 20rem;
+  width: 16rem;
   padding: 0;
 }
 </style>
