@@ -33,9 +33,9 @@
 
             <b-nav-item class="nav-item">Contact</b-nav-item>
             <div class="icons">
-                 <img src="../assets/_ionicons_svg_md-mail.svg" class="icon" alt="Mail icon" v-b-tooltip.hover.bottom title="Email me">
-                 <img src="../assets/_ionicons_svg_logo-linkedin.svg" class="icon" alt="Linkedin icon" v-b-tooltip.hover.bottom title="Linked in profile">
-                 <img src="../assets/_ionicons_svg_logo-github.svg" class="icon" alt="Github icon" v-b-tooltip.hover.bottom title="GitHub page" >
+                 <img src="../assets/_ionicons_svg_md-mail.svg" class="icon" alt="Mail icon" v-b-tooltip.hover.bottom title="Email me" @click="openInNewTab('mailto:jonathan.kvist@gmail.com')">
+                 <img src="../assets/_ionicons_svg_logo-linkedin.svg" class="icon" alt="Linkedin icon" v-b-tooltip.hover.bottom title="Linked in profile" @click="openInNewTab('https://linkedin.com/in/jonathan-kvist')">
+                 <img src="../assets/_ionicons_svg_logo-github.svg" class="icon" alt="Github icon" v-b-tooltip.hover.bottom title="GitHub page" @click="openInNewTab('https://github.com/kviist')">
             </div>
         </b-nav>
     </div>
@@ -49,8 +49,8 @@ export default {
         ParticlesJS
     },
     methods: {
-        openInNewTab: function () {
-            
+        openInNewTab: function (page) {
+            window.open(page);
         }
     }
 }
