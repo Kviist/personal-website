@@ -1,15 +1,22 @@
 <template>
 <div>
-  <VueMathjax :formula="formula"></VueMathjax>
+  <vue-mathjax :formula = "data"></vue-mathjax>
 </div>
 </template>
 
 <script>
 
-import {VueMathjax} from './vue-mathjax.vue'
+import VueMathjax from './vue-mathjax.vue'
 export default {
     components: {
-        VueMathjax
+        'vue-mathjax': VueMathjax
+    },
+    name: 'Home',
+    data () {
+        return {
+        data: '$$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$',
+        msg: 'Welcome to Your Vue.js App'
+        }
     }
 }
   
