@@ -154,6 +154,7 @@ a:hover {
         text-align: center;
         padding: 10vh;
         float: none;
+        width: 100%;
     }
 
     .icons {
@@ -164,6 +165,10 @@ a:hover {
     .icon{
         width: 20%;
         text-align: center;
+    }
+
+    #portrait {
+        width: 40%;
     }
 
 }
