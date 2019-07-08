@@ -137,7 +137,6 @@ a:hover {
 
 .icon {
     width: 25%;
-    fill: white;
 }
 
 #app, body, .full-height, .main-comp, .left, .left-div {
