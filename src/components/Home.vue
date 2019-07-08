@@ -12,6 +12,11 @@ export default {
         'vue-mathjax': VueMathjax
     },
     name: 'Home',
+    mounted() {
+        let recaptchaScript = document.createElement('script')
+        recaptchaScript.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML')
+        document.head.appendChild(recaptchaScript)
+    },
     data () {
         return {
         data: '$$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$',
