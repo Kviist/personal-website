@@ -7,7 +7,7 @@
           </div>
         </div>
         <div class="right">
-         <home v-if="whichCompontent() === 'Home'"/>
+          <home v-if="whichCompontent() === 'Home'"/>
         </div>
     </div>
   </div>
@@ -68,7 +68,6 @@ export default {
 }
 
 .left-div {
-  position: absolute;
   width: 16rem;
   padding: 0;
 }
@@ -78,12 +77,14 @@ export default {
   width: 100%;
   height: 100vh;
   display: inline-block;
+  z-index: 999;
 }
 
 @media screen and (max-width: 768px) {
     .left, .left-div, .right{
         width: 100%;
-        height: 100vh;
+        height: auto;
+        overflow: scroll;
     }
 
     .main-comp {

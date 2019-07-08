@@ -1,5 +1,5 @@
 <template>
-    <div class="full-height">
+    <div class="">
         <particles-j-s class="particles"></particles-j-s>
         <b-nav vertical class="top">
             <b-img fluid rounded='circle' id="portrait" :src="require('../assets/jonathan.jpg')" alt="Jonathan Kvist" />
@@ -68,10 +68,13 @@ export default {
     margin-top: 1rem;
 }
 .particles{
-    position: absolute;
-    height: 100%;
     width: 100%;
-    background-color: #623e88;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    background-color: rgb(36, 34, 34);
 }
 .navigation {
     opacity: 0.99;
