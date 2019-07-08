@@ -71,17 +71,20 @@ export default {
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: -10;
+    z-index: -1;
     top: 0;
     left: 0;
     background-color: rgb(36, 34, 34);
+    pointer-events: all;
 }
+
 .navigation {
     opacity: 0.99;
-    pointer-events:none;
     font-size:100%;
     text-align: left;
-    vertical-align:middle;
+    pointer-events: auto;
+    width: 60%;
+    float: left;
 }
 a, p{
     color: white;
@@ -103,7 +106,6 @@ a, p{
 .nav-item{
     font-size: 1.5rem;
     opacity: 0.99;
-    pointer-events:auto;
 }
 .sub-nav-item{
     font-size: 1.5rem;
@@ -133,19 +135,29 @@ a:hover {
     flex: 0 0 auto;
 }
 
+.icon {
+    width: 15%;
+}
+
+#app, body, .full-height, .main-comp, .left, .left-div {
+    pointer-events: none;
+}
+
 .icon:hover {
     cursor: pointer;
 }
 
-.icon {
-    width: 15%;
-}
 
 @media screen and (max-width: 768px) {
     .navigation {
         margin: 0 auto;
         text-align: center;
         padding: 10vh;
+        float: none;
+    }
+
+    .icons {
+        text-align: center;
     }
 
 }
