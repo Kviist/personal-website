@@ -136,7 +136,7 @@ a:hover {
 }
 
 .icon {
-    width: 15%;
+    width: 35%;
 }
 
 #app, body, .full-height, .main-comp, .left, .left-div {
@@ -157,7 +157,12 @@ a:hover {
     }
 
     .icons {
-        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon{
+        width: 20%;
     }
 
 }
