@@ -79,7 +79,7 @@ export default {
   width: 100%;
   height: 100vh;
   display: inline-block;
-  z-index: 999;
+  z-index: 10;
 }
 
 @media screen and (max-width: 768px) {

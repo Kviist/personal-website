@@ -1,12 +1,11 @@
 <template>
-<div>
-  <vue-mathjax :formula = "data"></vue-mathjax>
-</div>
+    <vue-mathjax :formula = "data" class="formula"></vue-mathjax>
 </template>
 
 <script>
 
-import VueMathjax from './vue-mathjax.vue'
+import {VueMathjax} from 'vue-mathjax'
+
 export default {
     components: {
         'vue-mathjax': VueMathjax
@@ -26,3 +25,10 @@ export default {
 }
   
 </script>
+
+<style>
+.formula, .MathJax_Display {
+  z-index: 11;
+  pointer-events: auto;
+}
+</style>
