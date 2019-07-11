@@ -16,7 +16,7 @@
             <b-nav-item v-b-toggle.collapse-projects class="nav-item" @click="setCurrentProject('ExampleProject')">Projects</b-nav-item>
 
             <b-collapse id="collapse-projects" class="nav-item">
-                <b-nav-item :class="['sub-nav-item', {'highlight' : exampleProjectActive}]" @click="setCurrentProject('ExampleProject')">Example Project</b-nav-item>
+                <b-nav-item class="sub-nav-item"  @click="setCurrentProject('ExampleProject')"><span :class="exampleProjectActive ? 'highlight' : 'non-highlight'"> Example Project </span></b-nav-item>
                 <b-nav-item class="sub-nav-item">2</b-nav-item>
             </b-collapse>
 
@@ -96,6 +96,10 @@ export default {
 }
 .highlight {
     color: red;
+}
+
+.non-highlist {
+    color: blue;
 }
 
 a, p{
