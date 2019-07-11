@@ -7,7 +7,8 @@
           </div>
         </div>
         <div class="right">
-          <home v-if="whichCompontent() === 'Home'"/>
+          <home v-if="whichCompontent === 'Home'"/>
+          <example-project v-else-if="whichCompontent === 'ExampleProject'"/>
         </div>
     </div>
   </div>
@@ -19,26 +20,27 @@
 <script>
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
-Vue.use(BootstrapVue)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import NavBar from './components/NavBar.vue'
 import Home from './components/Home.vue'
+import ExampleProject from './components/ExampleProject.vue'
+Vue.use(BootstrapVue)
 
 export default {
   name: 'app',
   components: {
     NavBar,
-    Home
+    Home,
+    ExampleProject
   },
   data: () => {
     return {
-      currentPage: "Home"
     }
   }, 
-  methods: {
-    whichCompontent: function () {
-      return this.currentPage;
+  computed: {
+    whichCompontent () {
+      return this.$store.getters.getCurrentPage
     }
   }
 }
@@ -75,7 +77,7 @@ export default {
 }
 
 .right {
-  background-color: red;
+  background-color: whitesmoke;
   width: 100%;
   height: 100vh;
   display: inline-block;

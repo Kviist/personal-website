@@ -13,10 +13,10 @@
             <b-nav-item class="nav-item" >Home</b-nav-item>
 
 
-            <b-nav-item v-b-toggle.collapse-projects class="nav-item">Projects</b-nav-item>
+            <b-nav-item v-b-toggle.collapse-projects class="nav-item" @click="setCurrentProject('ExampleProject')">Projects</b-nav-item>
 
             <b-collapse id="collapse-projects" class="nav-item">
-                <b-nav-item class="sub-nav-item">1</b-nav-item>
+                <b-nav-item :class="['sub-nav-item', {'highlight' : exampleProjectActive}]" @click="setCurrentProject('ExampleProject')">Example Project</b-nav-item>
                 <b-nav-item class="sub-nav-item">2</b-nav-item>
             </b-collapse>
 
@@ -48,9 +48,17 @@ export default {
     components: {
         ParticlesJS
     },
+    computed: {
+        exampleProjectActive () {
+            return this.$store.getters.getCurrentPage === 'ExampleProject'
+        }
+    },
     methods: {
         openInNewTab: function (page) {
             window.open(page);
+        },
+        setCurrentProject: function (currentProject) {
+            this.$store.commit('setCurrentProject', currentProject)
         }
     }
 }
@@ -86,6 +94,10 @@ export default {
     width: 60%;
     float: left;
 }
+.highlight {
+    color: red;
+}
+
 a, p{
     color: white;
     font-weight: 200;
@@ -108,10 +120,10 @@ a, p{
     opacity: 0.99;
 }
 .sub-nav-item{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     opacity: 0.99;
     pointer-events:auto;
-    text-indent: 1.5rem; 
+    margin-left: 1.5rem;
 }
 a:hover {
     color: white;
