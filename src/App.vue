@@ -24,7 +24,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import NavBar from './components/NavBar.vue'
 import Home from './components/Home.vue'
-import ExampleProject from './components/ExampleProject.vue'
+import ExampleProject from './components/projects/ExampleProject.vue'
 import {tabs} from './tabs.js'
 Vue.use(BootstrapVue)
 
