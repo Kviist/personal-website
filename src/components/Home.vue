@@ -3,7 +3,6 @@
 </template>
 
 <script>
-
 import {VueMathjax} from 'vue-mathjax'
 
 export default {
@@ -23,7 +22,6 @@ export default {
         }
     }
 }
-  
 </script>
 
 <style>

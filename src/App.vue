@@ -7,8 +7,8 @@
           </div>
         </div>
         <div class="right">
-          <home v-if="whichCompontent === 'Home'"/>
-          <example-project v-else-if="whichCompontent === 'ExampleProject'"/>
+          <home v-if="whichCompontent === TABS.HOME"/>
+          <example-project v-else-if="whichCompontent === TABS.EXAMPLEPROJECT"/>
         </div>
     </div>
   </div>
@@ -25,6 +25,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import NavBar from './components/NavBar.vue'
 import Home from './components/Home.vue'
 import ExampleProject from './components/ExampleProject.vue'
+import {tabs} from './tabs.js'
 Vue.use(BootstrapVue)
 
 export default {
@@ -36,6 +37,7 @@ export default {
   },
   data: () => {
     return {
+      TABS: tabs
     }
   }, 
   computed: {
@@ -54,7 +56,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   overflow: scroll;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .full-height {

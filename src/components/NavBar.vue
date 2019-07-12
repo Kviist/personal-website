@@ -10,13 +10,13 @@
         </b-nav>
         <b-nav vertical class="navigation">
 
-            <b-nav-item class="nav-item" >Home</b-nav-item>
+            <b-nav-item class="nav-item" @click="setCurrentProject(TABS.HOME)">Home</b-nav-item>
 
 
-            <b-nav-item v-b-toggle.collapse-projects class="nav-item" @click="setCurrentProject('ExampleProject')">Projects</b-nav-item>
+            <b-nav-item v-b-toggle.collapse-projects class="nav-item" @click="setCurrentProject(TABS.EXAMPLEPROJECT)">Projects</b-nav-item>
 
             <b-collapse id="collapse-projects" class="nav-item">
-                <b-nav-item class="sub-nav-item"  @click="setCurrentProject('ExampleProject')"><span :class="exampleProjectActive ? 'highlight' : 'non-highlight'"> Example Project </span></b-nav-item>
+                <b-nav-item class="sub-nav-item"  @click="setCurrentProject(TABS.EXAMPLEPROJECT)"><span :class="exampleProjectActive ? 'highlight' : 'non-highlight'"> Example Project </span></b-nav-item>
                 <b-nav-item class="sub-nav-item">2</b-nav-item>
             </b-collapse>
 
@@ -43,14 +43,20 @@
 
 <script>
 import ParticlesJS from './ParticlesJS.vue'
+import {tabs} from '../tabs.js'
 
 export default {
     components: {
         ParticlesJS
     },
+    data: () => {
+        return {
+            TABS: tabs
+        }
+    },
     computed: {
         exampleProjectActive () {
-            return this.$store.getters.getCurrentPage === 'ExampleProject'
+            return this.$store.getters.getCurrentPage === this.TABS.EXAMPLEPROJECT
         }
     },
     methods: {
@@ -95,11 +101,7 @@ export default {
     float: left;
 }
 .highlight {
-    color: red;
-}
-
-.non-highlist {
-    color: blue;
+    font-weight: bold;
 }
 
 a, p{
@@ -163,6 +165,12 @@ a:hover {
 .icon:hover {
     cursor: pointer;
 }
+
+
+.right, #MathJax_MenuFrame{
+    pointer-events: all !important;
+}
+
 
 
 @media screen and (max-width: 768px) {
