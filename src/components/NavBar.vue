@@ -17,7 +17,7 @@
 
             <b-collapse id="collapse-projects" class="nav-item" >
                 <b-nav-item class="sub-nav-item"  @click="setCurrentProject(TABS.EXAMPLEPROJECT)"><span :class="exampleProjectActive ? 'highlight' : 'non-highlight'"> Example Project </span></b-nav-item>
-                <b-nav-item class="sub-nav-item">2</b-nav-item>
+                <b-nav-item class="sub-nav-item" @click="setCurrentProject(TABS.ONNXDEMO)">Onnx</b-nav-item>
             </b-collapse>
 
 
@@ -182,13 +182,17 @@ a:hover {
         width: 100%;
     }
 
+    .sub-nav-item {
+        margin: 0;
+    }
+
     .icons {
         align-items: center;
         justify-content: center;
     }
 
     .icon{
-        width: 20%;
+        width: 15%;
         text-align: center;
     }
 
