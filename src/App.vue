@@ -8,6 +8,7 @@
         </div>
         <div class="right">
           <home v-if="whichCompontent === TABS.HOME"/>
+          <project-hub v-else-if="whichCompontent === TABS.PROJECTHUB"/>
           <example-project v-else-if="whichCompontent === TABS.EXAMPLEPROJECT"/>
         </div>
     </div>
@@ -24,6 +25,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import NavBar from './components/NavBar.vue'
 import Home from './components/Home.vue'
+import ProjectHub from './components/ProjectHub.vue'
 import ExampleProject from './components/projects/ExampleProject.vue'
 import {tabs} from './tabs.js'
 Vue.use(BootstrapVue)
@@ -33,6 +35,7 @@ export default {
   components: {
     NavBar,
     Home,
+    ProjectHub,
     ExampleProject
   },
   data: () => {
