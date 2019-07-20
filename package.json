@@ -13,6 +13,7 @@
     "core-js": "^2.6.5",
     "es6-promise": "^4.2.8",
     "mathjax": "^2.7.5",
+    "onnxjs": "^0.1.7",
     "particles.js": "^2.0.0",
     "vue": "^2.6.10",
     "vue-mathjax": "0.0.8",

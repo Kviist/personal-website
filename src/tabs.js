@@ -1,4 +1,5 @@
 export const tabs = {
     HOME:'Home',
-    EXAMPLEPROJECT:'ExampleProject'
+    EXAMPLEPROJECT:'ExampleProject',
+    ONNXDEMO:'Onnx'
 }

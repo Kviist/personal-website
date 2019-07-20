@@ -9,6 +9,7 @@
         <div class="right">
           <home v-if="whichCompontent === TABS.HOME"/>
           <example-project v-else-if="whichCompontent === TABS.EXAMPLEPROJECT"/>
+          <onnxdemo v-else-if="whichCompontent === TABS.ONNXDEMO"/>
         </div>
     </div>
   </div>
@@ -25,6 +26,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import NavBar from './components/NavBar.vue'
 import Home from './components/Home.vue'
 import ExampleProject from './components/projects/ExampleProject.vue'
+import Onnxdemo from './components/projects/Onnxdemo.vue'
 import {tabs} from './tabs.js'
 Vue.use(BootstrapVue)
 
@@ -33,7 +35,8 @@ export default {
   components: {
     NavBar,
     Home,
-    ExampleProject
+    ExampleProject,
+    Onnxdemo
   },
   data: () => {
     return {
