@@ -15,7 +15,7 @@
 
             <b-nav-item v-b-toggle.collapse-projects class="nav-item" @click="setCurrentProject(TABS.PROJECTHUB)">Projects</b-nav-item>
 
-            <b-collapse id="collapse-projects" class="nav-item" >
+            <b-collapse id="collapse-projects"  accordion="nav-accordion" class="nav-item" >
                 <b-nav-item class="sub-nav-item"  @click="setCurrentProject(TABS.EXAMPLEPROJECT)"><span :class="exampleProjectActive ? 'highlight' : 'non-highlight'"> Example Project </span></b-nav-item>
                 <b-nav-item class="sub-nav-item" @click="setCurrentProject(TABS.ONNXDEMO)">Onnx</b-nav-item>
             </b-collapse>
@@ -26,7 +26,7 @@
 
             <b-nav-item v-b-toggle.collapse-blog class="nav-item">Blog</b-nav-item>
 
-            <b-collapse id="collapse-blog" class="nav-item">
+            <b-collapse id="collapse-blog" accordion="nav-accordion" class="nav-item">
                 <b-nav-item class="sub-nav-item">1</b-nav-item>
                 <b-nav-item class="sub-nav-item">2</b-nav-item>
             </b-collapse>

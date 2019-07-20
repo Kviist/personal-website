@@ -1,6 +1,6 @@
 export const tabs = {
     HOME:'Home',
     EXAMPLEPROJECT:'ExampleProject',
-    PROJECTHUB : 'ProjectHub'
+    PROJECTHUB : 'ProjectHub',
     ONNXDEMO:'Onnx'
 }
