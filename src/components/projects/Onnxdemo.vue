@@ -3,6 +3,7 @@
 </template>
 
 <script>
+/*
 import { Tensor, InferenceSession } from "onnxjs";
 import ExampleProject from  "./ExampleProject"
 
@@ -17,7 +18,6 @@ export default {
     },
     created() {
         this.loadOnnx()
-        /*
         let ckeditor = document.createElement('script');    
         ckeditor.setAttribute('src',"https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js");
         document.head.appendChild(ckeditor);
@@ -35,7 +35,6 @@ export default {
             console.log(`model output tensor: ${outputTensor.data}.`);
             });
         });
-        */
     },
     methods: {
         async loadOnnx(){
@@ -52,5 +51,5 @@ export default {
         }
     }
 }
+*/
 </script>
-

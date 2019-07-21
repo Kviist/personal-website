@@ -24,7 +24,7 @@
             <b-nav-item class="nav-item">Publications</b-nav-item>
 
 
-            <b-nav-item @click="goTo('blog')" class="nav-item">Blog</b-nav-item>
+            <b-nav-item @click="goTo('blog');setCurrentProject(TABS.BLOG)" class="nav-item">Blog</b-nav-item>
 
             <b-collapse id="collapse-blog" v-bind:visible="blog_bind" class="nav-item">
                 <b-nav-item class="sub-nav-item">1</b-nav-item>
@@ -116,8 +116,8 @@ export default {
     font-weight: bold;
 }
 
-a, p{
-    color: white;
+.nav-link, #names{
+    color:white;
     font-weight: 200;
 }
 
@@ -136,6 +136,7 @@ a, p{
 .nav-item{
     font-size: 1.5rem;
     opacity: 0.99;
+    color: black;
 }
 .sub-nav-item{
     font-size: 1.2rem;
