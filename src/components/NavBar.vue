@@ -13,9 +13,9 @@
             <b-nav-item class="nav-item" @click="setCurrentProject(TABS.HOME)">Home</b-nav-item>
 
 
-            <b-nav-item v-b-toggle.collapse-projects class="nav-item" @click="setCurrentProject(TABS.PROJECTHUB)">Projects</b-nav-item>
+            <b-nav-item class="nav-item" @click="setCurrentProject(TABS.PROJECTHUB);goTo('projects')">Projects</b-nav-item>
 
-            <b-collapse id="collapse-projects"  accordion="nav-accordion" class="nav-item" >
+            <b-collapse id="collapse-projects"  v-bind:visible="projects_bind" class="nav-item" >
                 <b-nav-item class="sub-nav-item"  @click="setCurrentProject(TABS.EXAMPLEPROJECT)"><span :class="exampleProjectActive ? 'highlight' : 'non-highlight'"> Example Project </span></b-nav-item>
                 <b-nav-item class="sub-nav-item" @click="setCurrentProject(TABS.ONNXDEMO)">Onnx</b-nav-item>
             </b-collapse>
@@ -24,9 +24,9 @@
             <b-nav-item class="nav-item">Publications</b-nav-item>
 
 
-            <b-nav-item v-b-toggle.collapse-blog class="nav-item">Blog</b-nav-item>
+            <b-nav-item @click="goTo('blog')" class="nav-item">Blog</b-nav-item>
 
-            <b-collapse id="collapse-blog" accordion="nav-accordion" class="nav-item">
+            <b-collapse id="collapse-blog" v-bind:visible="blog_bind" class="nav-item">
                 <b-nav-item class="sub-nav-item">1</b-nav-item>
                 <b-nav-item class="sub-nav-item">2</b-nav-item>
             </b-collapse>
@@ -51,7 +51,9 @@ export default {
     },
     data: () => {
         return {
-            TABS: tabs
+            TABS: tabs,
+            blog_bind: false,
+            projects_bind: false
         }
     },
     computed: {
@@ -65,6 +67,16 @@ export default {
         },
         setCurrentProject: function (currentProject) {
             this.$store.commit('setCurrentProject', currentProject)
+        },
+        goTo(navTab){
+            if(navTab === 'blog'){
+                this.blog_bind = true
+                this.projects_bind = false
+            } else if (navTab == 'projects') {
+                this.blog_bind = false
+                this.projects_bind = true
+            }
+
         }
     }
 }
