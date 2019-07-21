@@ -1,18 +1,15 @@
 <template>
     <div class="project-div">
-        <ul class="list-unstyled">
-            <b-media tag="li">
-                <h5 class="mt-0 mb-1">List-based media object</h5>
-                <p class="mb-0">
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-                    Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc
-                    ac nisi vulputate fringilla. Donec lacinia congue felis in Donec lacinia congue felis in Donec lacinia congue felis in Donec lacinia congue felis in<vue-mathjax :formula = "inline" class="formula"></vue-mathjax> faucibus.
-                </p>
-                 <vue-mathjax :formula = "data" class="formula"></vue-mathjax>
-            </b-media>
-        </ul>
+        <p class = "h3 text">
+            Complex Analysis
+        </p>
+        <p class = "h5 text">
+            The Cauchy-Reimann Theorem
+        </p>
+        <p class = "p text">
+            <strong>Theorem 1: Cauchy-Reimann Theorem: </strong> <vue-mathjax :formula = "cauchyReimann" class="formula"></vue-mathjax> 
+        </p>
     </div>
-    
 </template>
 
 <script>
@@ -33,6 +30,7 @@ export default {
         return {
           data: '$$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$',
           inline: '$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$',
+          cauchyReimann : 'Let $A \\subseteq \\mathbb{C}$ be an open set, $z_0 \\in A$, and let $f: A \\rightarrow \\mathbb{C}$ where $f = u+iv\\ (u,v:\\mathbb{R}^2 \\rightarrow \\mathbb{R})$. Then $f$ is analytic at $z_0$ if and only there is a neighbourhood $N \\subseteq A of z_0$ for which:'
         }
     }
 }
@@ -43,11 +41,52 @@ export default {
 .project-div{
     width: 80%;
     margin: 3% auto;
+    color:black;
 }
 
-p, h5 {
-    color: black;
+
+
+.h1{
+    font-size: 2.875em;
+    text-align: center;
+
 }
+
+.h2{
+    font-size: 2.875em;
+    text-align: center;
+
+}
+
+.h3{
+    font-size: 1.875em;
+    text-align: center;
+
+}
+
+.h4{
+    font-size: 1.675em;
+    text-align: left;
+}
+
+.h5{
+    font-size: 1.375em;
+    text-align: left;
+}
+
+.p{
+    font-size: 0.875em;
+    text-align: left;
+}
+
+.text {
+    color:black;
+}
+
+.bold{
+    font-weight: bold;
+}
+
 .formula, .MathJax_Display {
   z-index: 11;
   pointer-events: auto;
