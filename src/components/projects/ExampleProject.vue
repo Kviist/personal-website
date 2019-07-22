@@ -7,7 +7,13 @@
             The Cauchy-Reimann Theorem
         </p>
         <p class = "p text">
-            <strong>Theorem 1: Cauchy-Reimann Theorem: </strong> <vue-mathjax :formula = "cauchyReimann" class="formula"></vue-mathjax> 
+            <strong>Theorem 1: Cauchy-Reimann Theorem: </strong> <vue-mathjax :formula = "cauchyReimann1" class="formula"></vue-mathjax> <br><br>
+            <strong>1) </strong> <vue-mathjax :formula = "cauchyReimann2" class="formula"></vue-mathjax><br><br>
+            <strong>2) </strong> <vue-mathjax :formula = "cauchyReimann3" class="formula"></vue-mathjax><br><br>
+            <strong>3) </strong> <vue-mathjax :formula = "cauchyReimann4" class="formula"></vue-mathjax>
+        </p>
+        <p class = "p text">
+            <br> Proof: <br>
         </p>
     </div>
 </template>
@@ -30,7 +36,10 @@ export default {
         return {
           data: '$$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$',
           inline: '$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$',
-          cauchyReimann : 'Let $A \\subseteq \\mathbb{C}$ be an open set, $z_0 \\in A$, and let $f: A \\rightarrow \\mathbb{C}$ where $f = u+iv\\ (u,v:\\mathbb{R}^2 \\rightarrow \\mathbb{R})$. Then $f$ is analytic at $z_0$ if and only there is a neighbourhood $N \\subseteq A of z_0$ for which:'
+          cauchyReimann1 : 'Let $A \\subseteq \\mathbb{C}$ be an open set, $z_0 \\in A$, and let $f: A \\rightarrow \\mathbb{C}$ where $f = u+iv\\ (u,v:\\mathbb{R}^2 \\rightarrow \\mathbb{R})$. Then $f$ is analytic at $z_0$ if and only there is a neighbourhood $\\mathcal{N} \\subseteq A$ of $z_0$ for which:',
+          cauchyReimann2 : '$\\frac{\\partial u}{\\partial x},\\frac{\\partial u}{\\partial y},\\frac{\\partial v}{\\partial x},\\frac{\\partial v}{\\partial y}$ all exist and are continuous on $\\mathcal{N}$',
+          cauchyReimann3 : 'The equations $\\frac{\\partial u}{\\partial x}=\\frac{\\partial v}{\\partial y}$ and $\\frac{\\partial u}{\\partial y}=−\\frac{\\partial v}{\\partial x}$, called the Cauchy-Riemann Equations, are satisfied on all of $\\mathcal{N}$.',
+          cauchyReimann4 : '$f\'(x + iy) = \\frac{\\partial u}{\\partial x} (x, y) + i \\frac{\\partial v}{\\partial x} (x, y) = \\frac{\\partial v}{\\partial y} (x, y) - i \\frac{\\partial u}{\\partial y}(x, y)$'
         }
     }
 }
