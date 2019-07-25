@@ -1,15 +1,11 @@
 <template>
     <div class="project-div">
-        <ul class="list-unstyled">
-            <b-media tag="li">
-                <b-img slot="aside" blank blank-color="#abc" width="64" alt="placeholder"></b-img>
-
-                <h5 class="mt-0 mb-1">List-based media object</h5>
-                <p class="mb-0">
-                    Letinus Jonathaninus
-                </p>
-            </b-media>
-        </ul>
+        <p class = "h2 text">
+            Projects
+        </p>
+        <p class = "h4 text">
+            Mathmatics Proofs
+        </p>
     </div>
     
 </template>
@@ -37,8 +33,45 @@ export default {
     margin: 3% auto;
 }
 
-p, h5 {
-    color: black;
+.h1{
+    font-size: 2.875em;
+    text-align: center;
+
+}
+
+.h2{
+    font-size: 2.875em;
+    text-align: center;
+
+}
+
+.h3{
+    font-size: 1.875em;
+    text-align: center;
+
+}
+
+.h4{
+    font-size: 1.675em;
+    text-align: center;
+}
+
+.h5{
+    font-size: 1.375em;
+    text-align: left;
+}
+
+.p{
+    font-size: 0.875em;
+    text-align: left;
+}
+
+.text {
+    color:black;
+}
+
+.bold{
+    font-weight: bold;
 }
 
 </style>
