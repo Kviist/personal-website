@@ -1,7 +1,7 @@
 export const tabs = {
-    HOME:'Home',
-    EXAMPLEPROJECT:'ExampleProject',
-    PROJECTHUB : 'ProjectHub',
-    ONNXDEMO:'Onnx',
-    BLOG:'Blog'
+    HOME:'home',
+    EXAMPLEPROJECT:'exampleproject',
+    PROJECTHUB : 'projecthub',
+    ONNXDEMO:'onnx',
+    BLOG:'blog'
 }

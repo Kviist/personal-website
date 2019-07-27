@@ -1,61 +1,8 @@
 <template>
   <div id="app">
-    <div class="full-height main-comp">
-        <div class="left">
-          <div class="full-height left-div">
-              <nav-bar class="full-height"/>
-          </div>
-        </div>
-        <div class="right">
-          <home v-if="whichCompontent === TABS.HOME"/>
-          <project-hub v-else-if="whichCompontent === TABS.PROJECTHUB"/>
-          <example-project v-else-if="whichCompontent === TABS.EXAMPLEPROJECT"/>
-          <onnxdemo v-else-if="whichCompontent === TABS.ONNXDEMO"/>
-          <blog v-else-if="whichCompontent === TABS.BLOG"/>
-        </div>
-    </div>
+    <router-view/>
   </div>
 </template>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML"></script>
-
-<script>
-import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import NavBar from './components/NavBar.vue'
-import Home from './components/Home.vue'
-import ProjectHub from './components/ProjectHub.vue'
-import Blog from './components/Blog.vue'
-import ExampleProject from './components/projects/ExampleProject.vue'
-import Onnxdemo from './components/projects/Onnxdemo.vue'
-import {tabs} from './tabs.js'
-Vue.use(BootstrapVue)
-
-export default {
-  name: 'app',
-  components: {
-    NavBar,
-    Home,
-    ProjectHub,
-    ExampleProject,
-    Onnxdemo,
-    Blog
-  },
-  data: () => {
-    return {
-      TABS: tabs
-    }
-  }, 
-  computed: {
-    whichCompontent () {
-      return this.$store.getters.getCurrentPage
-    }
-  }
-}
-</script>
 
 <style>
 #app {
